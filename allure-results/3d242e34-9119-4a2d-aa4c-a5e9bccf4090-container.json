@@ -1,0 +1,29 @@
+{
+  "uuid": "3d242e34-9119-4a2d-aa4c-a5e9bccf4090",
+  "children": [
+    "97dbb24c-59db-4ade-aea6-827bd8c04c30"
+  ],
+  "befores": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "name": "\"before all\" hook for \"go to facebook\""
+    }
+  ],
+  "afters": [
+    {
+      "status": "passed",
+      "statusDetails": {},
+      "stage": "finished",
+      "steps": [],
+      "attachments": [],
+      "parameters": [],
+      "name": "\"after all\" hook for \"go to facebook\""
+    }
+  ],
+  "name": "Aonther test"
+}
