@@ -21,6 +21,7 @@ const axios_1 = require("axios");
     let driver;
     (0, mocha_1.before)(function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             const chromeOption = new chrome_1.Options().addArguments('--headless');
             const capabilities = selenium_webdriver_1.Capabilities.chrome().merge(chromeOption);
             driver = yield new selenium_webdriver_1.Builder().withCapabilities(capabilities).build();
@@ -28,6 +29,7 @@ const axios_1 = require("axios");
     });
     (0, mocha_1.it)('go to facebook', function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             yield driver.get(facebook_1.facebook.url.mainPage);
             const title = yield driver.getTitle();
             (0, chai_1.expect)(title).to.include(facebook_1.facebook.title.pageTitle);
@@ -36,6 +38,7 @@ const axios_1 = require("axios");
     });
     (0, mocha_1.after)(function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             driver.quit();
         });
     });
@@ -52,7 +55,7 @@ const axios_1 = require("axios");
     });
     (0, mocha_1.it)('Yahoo', function () {
         return __awaiter(this, void 0, void 0, function* () {
-            this.timeout(5000);
+            this.timeout(10000);
             yield driver.get(yahoo_1.yahoo.url.loginPage);
             const title = yield driver.getTitle();
             (0, chai_1.expect)(title).to.include(yahoo_1.yahoo.title.pageTitle);

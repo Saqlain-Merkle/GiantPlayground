@@ -13,12 +13,13 @@ describe("Aonther test", () => {
     let driver: WebDriver;
 
     before(async function () {
+        this.timeout(10000);
         const chromeOption = new Options().addArguments('--headless')
         const capabilities = Capabilities.chrome().merge(chromeOption)
         driver = await new Builder().withCapabilities(capabilities).build()
     })
     it('go to facebook', async function () {
-
+        this.timeout(10000);
         await driver.get(facebook.url.mainPage)
         const title = await driver.getTitle();
         expect(title).to.include(facebook.title.pageTitle);
@@ -26,6 +27,7 @@ describe("Aonther test", () => {
 
     });
     after(async function () {
+        this.timeout(10000);
         driver.quit()
     })
 });
@@ -42,7 +44,7 @@ describe("Playing Around", () =>{
     })
 
     it('Yahoo', async function(){
-        this.timeout(5000);
+        this.timeout(10000);
         await driver.get(yahoo.url.loginPage)
         const title = await driver.getTitle();
         expect(title).to.include(yahoo.title.pageTitle);

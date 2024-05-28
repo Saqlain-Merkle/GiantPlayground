@@ -18,6 +18,7 @@ const config_1 = require("../Data/config");
     let driver;
     (0, mocha_1.before)(function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             const chromeOption = new chrome_1.Options().addArguments('--headless');
             const capabilities = selenium_webdriver_1.Capabilities.chrome().merge(chromeOption);
             driver = yield new selenium_webdriver_1.Builder()
@@ -27,6 +28,7 @@ const config_1 = require("../Data/config");
     });
     (0, mocha_1.it)("go to google", function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             yield driver.get(config_1.config.url.google);
             const title = yield driver.getTitle();
             (0, chai_1.expect)(title).to.equal(config_1.config.title.pageTitle);
@@ -35,6 +37,7 @@ const config_1 = require("../Data/config");
     });
     (0, mocha_1.after)(function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             driver.quit;
         });
     });

@@ -8,7 +8,7 @@ describe("First Test", () => {
     let driver: WebDriver;
 
     before(async function () {
-
+            this.timeout(10000);
             const chromeOption = new Options().addArguments('--headless')
             const capabilities = Capabilities.chrome().merge(chromeOption)
             driver = await new Builder()
@@ -18,6 +18,7 @@ describe("First Test", () => {
     )
 
     it("go to google", async function () {
+        this.timeout(10000);
         await driver.get(config.url.google)
         const title = await driver.getTitle();
         expect(title).to.equal(config.title.pageTitle);
@@ -25,6 +26,7 @@ describe("First Test", () => {
     });
 
     after(async function () {
+        this.timeout(10000);
          driver.quit
     })
 });
