@@ -1,1 +1,28 @@
-{"uuid":"7d18e147-4259-4955-82f3-2d23aa3461be","historyId":"04ee15ff243e2420830fb357f0eb6b99:d41d8cd98f00b204e9800998ecf8427e","status":"failed","statusDetails":{"message":"expected 'Facebook - Log på eller tilmeld dig' to equal 'Facebook'","trace":"AssertionError: expected 'Facebook - Log på eller tilmeld dig' to equal 'Facebook'\n    at Context.<anonymous> (TestJs/secondtest.js:29:42)\n    at Generator.next (<anonymous>)\n    at fulfilled (TestJs/secondtest.js:5:58)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"},"stage":"finished","steps":[],"attachments":[],"parameters":[],"labels":[{"name":"package","value":"TestJs"},{"name":"parentSuite","value":"Aonther test"}],"links":[],"start":1714650679624,"name":"go to facebook","fullName":"/TestJs/secondtest.js: Aonther test > go to facebook","stop":1714650681077}
+{
+  "uuid": "7d18e147-4259-4955-82f3-2d23aa3461be",
+  "historyId": "04ee15ff243e2420830fb357f0eb6b99:d41d8cd98f00b204e9800998ecf8427e",
+  "status": "failed",
+  "statusDetails": {
+    "message": "expected 'Facebook - Log på eller tilmeld dig' to equal 'Facebook'",
+    "trace": "AssertionError: expected 'Facebook - Log på eller tilmeld dig' to equal 'Facebook'\n    at Context.<anonymous> (TestJs/secondtest.js:29:42)\n    at Generator.next (<anonymous>)\n    at fulfilled (TestJs/secondtest.js:5:58)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)"
+  },
+  "stage": "finished",
+  "steps": [],
+  "attachments": [],
+  "parameters": [],
+  "labels": [
+    {
+      "name": "package",
+      "value": "TestJs"
+    },
+    {
+      "name": "parentSuite",
+      "value": "Aonther test"
+    }
+  ],
+  "links": [],
+  "start": 1714650679624,
+  "name": "go to facebook",
+  "fullName": "/TestJs/secondtest.js: Aonther test > go to facebook",
+  "stop": 1714650681077
+}
