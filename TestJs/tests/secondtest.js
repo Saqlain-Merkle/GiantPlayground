@@ -73,6 +73,7 @@ const axios_1 = require("axios");
     let driver;
     (0, mocha_1.before)(function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             const chromeOption = new chrome_1.Options().addArguments('--headless');
             const capabilities = selenium_webdriver_1.Capabilities.chrome().merge(chromeOption);
             driver = yield new selenium_webdriver_1.Builder().withCapabilities(capabilities).build();
@@ -88,6 +89,7 @@ const axios_1 = require("axios");
     });
     (0, mocha_1.after)(function () {
         return __awaiter(this, void 0, void 0, function* () {
+            this.timeout(10000);
             driver.quit();
         });
     });

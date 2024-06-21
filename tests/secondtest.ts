@@ -63,7 +63,7 @@ describe("log in", () =>{
     let driver: WebDriver;
 
     before(async function() {
-
+        this.timeout(10000);
         const chromeOption = new Options().addArguments('--headless')
         const capabilities = Capabilities.chrome().merge(chromeOption)
         driver = await new Builder().withCapabilities(capabilities).build()
@@ -79,7 +79,7 @@ describe("log in", () =>{
     });
 
     after(async function(){
-
+        this.timeout(10000);
         driver.quit()
 
     })
